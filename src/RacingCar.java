@@ -1,4 +1,4 @@
-public class RacingCar extends Vehicle{
+public class RacingCar extends Vehicle implements Engine{
     private int number;
     private Driver driver;
 

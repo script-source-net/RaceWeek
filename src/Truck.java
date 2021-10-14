@@ -1,4 +1,4 @@
-public class Truck extends Vehicle{
+public class Truck extends Vehicle implements Engine{
     private String licensePlate;
     private int cargoCapacity;
 

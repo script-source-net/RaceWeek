@@ -13,6 +13,7 @@ public abstract class Person extends Team {
         this.role = role;
     }
 
+
     @Override
     public String toString(){
         return "Das ist " + firstname + " "+lastname + " er ist "+role;
