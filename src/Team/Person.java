@@ -1,6 +1,6 @@
 package Team;
 
-public abstract class Person {
+public abstract class Person extends Team {
     private String firstname;
     private String lastname;
     private char gender;
@@ -8,7 +8,9 @@ public abstract class Person {
 
     public abstract String doJob();
 
-    public Person(String firstname, String lastname, char gender, String role) {
+    public Person(String tname, String firstname, String lastname, char gender, String role) {
+        super();
+        setTeamname(tname);
         this.firstname = firstname;
         this.lastname = lastname;
         this.gender = gender;

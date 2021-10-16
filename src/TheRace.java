@@ -18,25 +18,25 @@ public class TheRace {
         // Create Teams and add Drivers
         Team[] teams = new Team[10];
         // Mercedes
-        Driver valteri = new Driver("Valteri","Bottas",'m', 77);
-        Driver lewis = new Driver("Lewis","Hamilton",'m', 44);
-        teams[0] = new Team("Mercedes AMG F1", lewis, valteri, 9);
+        Driver valteri = new Driver("Mercedes AMG F1", "Valteri","Bottas",'m', 77);
+        Driver lewis = new Driver("Mercedes AMG F1", "Lewis","Hamilton",'m', 44);
+        teams[0] = new Team(lewis, valteri, 9);
         // McLaren
-        Driver lando = new Driver("Lando","Norris",'m', 4);
-        Driver daniel = new Driver("Daniel","Ricciardo",'m', 3);
-        teams[1] = new Team("McLaren", lando, daniel, 8);
+        Driver lando = new Driver("McLaren","Lando","Norris",'m', 4);
+        Driver daniel = new Driver("McLaren","Daniel","Ricciardo",'m', 3);
+        teams[1] = new Team(lando, daniel, 8);
         // RedBull
-        Driver max = new Driver("Max","Verstappen",'m', 33);
-        Driver sergio = new Driver("Sergio","Perez",'m', 11);
-        teams[2] = new Team("RedBull Racing", max, sergio, 9);
+        Driver max = new Driver("RedBull Racing","Max","Verstappen",'m', 33);
+        Driver sergio = new Driver("RedBull Racing","Sergio","Perez",'m', 11);
+        teams[2] = new Team( max, sergio, 9);
         // Aston Martin
-        Driver seb = new Driver("Sebastian","Vettel",'m', 5);
-        Driver lance = new Driver("Lance","Stroll",'m', 18);
-        teams[3] = new Team("Aston Martin", seb, lance, 6);
+        Driver seb = new Driver("Aston Martin","Sebastian","Vettel",'m', 5);
+        Driver lance = new Driver("Aston Martin","Lance","Stroll",'m', 18);
+        teams[3] = new Team( seb, lance, 6);
         // AlphaTauri
-        Driver pierre = new Driver("Pierre","Gasly",'m', 10);
-        Driver yuki = new Driver("Yuki","Tsunoda",'m', 22);
-        teams[4] = new Team("Aston Martin", pierre, yuki, 5);
+        Driver pierre = new Driver("AlphaTauri","Pierre","Gasly",'m', 10);
+        Driver yuki = new Driver("AlphaTauri","Yuki","Tsunoda",'m', 22);
+        teams[4] = new Team( pierre, yuki, 5);
 
         // Count drivers
         int drivers = 0;
@@ -155,7 +155,7 @@ public class TheRace {
         }
         for (Driver dnfDriver: dnfArray) {
             if(dnfDriver != null){
-                System.out.println("DNF    " + dnfDriver.getFirstname() + " " + dnfDriver.getLastname() + " #" + dnfDriver.getStartnumber());
+                System.out.println("DNF    " + dnfDriver.getFirstname() + " " + dnfDriver.getLastname() + " #" + dnfDriver.getStartnumber() + " " +dnfDriver.getTeamname());
             }else{
                 //System.out.println(dnfDriver);
             }

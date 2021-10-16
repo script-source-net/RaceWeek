@@ -7,14 +7,18 @@ public class Driver extends Person {
     private boolean dnf = false;
     private RacingCar car;
 
-    public Driver(String firstname, String lastname, char gender, int startnumber) {
-        super(firstname, lastname, gender, "Fahrer");
+    public Driver(String teamname, String firstname, String lastname, char gender, int startnumber) {
+        super(teamname, firstname, lastname, gender, "Fahrer");
         this.startnumber = startnumber;
         this.car = new RacingCar("","",320,960);
     }
 
     public int getStartnumber() {
         return startnumber;
+    }
+
+    public String getTeamName(){
+        return this.getTeamname();
     }
 
     public void calculateDnf(){

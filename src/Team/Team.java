@@ -29,8 +29,10 @@ public class Team {
         this.driver2 = driver2;
     }
 
-    public Team(String name, Driver d1, Driver d2, int p){
-        teamname = name;
+
+    public Team(){};
+
+    public Team(Driver d1, Driver d2, int p){
         driver1 = d1;
         driver2 = d2;
         if(p>1 && p<=10){

@@ -1,8 +1,8 @@
 package Team;
 
 public class Mechanic extends Person {
-    public Mechanic(String firstname, String lastname, char gender) {
-        super(firstname, lastname, gender, "Team.Mechanic");
+    public Mechanic(String teamname, String firstname, String lastname, char gender) {
+        super(teamname, firstname, lastname, gender, "Team.Mechanic");
     }
 
     @Override
