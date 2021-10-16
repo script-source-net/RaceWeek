@@ -1,4 +1,6 @@
-public abstract class Vehicle extends Team{
+package Team.Vehicle;
+
+public abstract class Vehicle {
 
     private String brand;
     private String label;

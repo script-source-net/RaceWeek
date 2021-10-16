@@ -1,27 +1,27 @@
 # RacingTeam
 Eine Factory um den Umgang mit implements und extends zu üben. 
-Das Team ist die grösste Abstrakte Instanz von der aus sich alles ableitet.
+Das Team.Team ist die grösste Abstrakte Instanz von der aus sich alles ableitet.
 
-##Person
+##Team.Team.Person
 abstract class
 
-**extends: Team**
+**extends: Team.Team**
 
-Eine Person ist die Haupt-Abstract-Klasse für die erstellung aller Team-Mitglieder.
+Eine Team.Team.Person ist die Haupt-Abstract-Klasse für die erstellung aller Team.Team-Mitglieder.
 Verschiedene Jobs entsprechen jeweils einer eigenen Klasse.
 
-###Driver
-**extends: Person**
+###Team.Team.Driver
+**extends: Team.Team.Person**
 
-###Mechanic
-**extends: Person**
+###Team.Mechanic
+**extends: Team.Team.Person**
 
-##Vehicle
+##Team.Vehicle.Vehicle
 abstract class
-**extends: Team**
+**extends: Team.Team**
 
-###Truck
-**extends Vehicle**
+###Team.Vehicle.Truck
+**extends Team.Vehicle.Vehicle**
 
-###RacingCar
-**extends Vehicle**
+###Team.Vehicle.Vehicle.RacingCar
+**extends Team.Vehicle.Vehicle**

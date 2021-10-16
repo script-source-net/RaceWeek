@@ -1,4 +1,9 @@
-public class Truck extends Vehicle implements Engine{
+package Team.Vehicle;
+
+import Team.Vehicle.Vehicle;
+import Team.Vehicle.Parts.Engine;
+
+public class Truck extends Vehicle implements Engine {
     private String licensePlate;
     private int cargoCapacity;
 
@@ -10,7 +15,7 @@ public class Truck extends Vehicle implements Engine{
 
     @Override
     public String drive() {
-        return "Der Truck liefert gerade teile aus dem Headquarter an die Strecke...";
+        return "Der Team.Vehicle.Truck liefert gerade teile aus dem Headquarter an die Strecke...";
     }
 
 }

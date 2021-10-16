@@ -1,6 +1,8 @@
-public class Mechanic extends Person{
+package Team;
+
+public class Mechanic extends Person {
     public Mechanic(String firstname, String lastname, char gender) {
-        super(firstname, lastname, gender, "Mechanic");
+        super(firstname, lastname, gender, "Team.Mechanic");
     }
 
     @Override
