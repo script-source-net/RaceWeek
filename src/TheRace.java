@@ -88,8 +88,8 @@ public class TheRace {
         start.printGrid(grid);
         String[] highlights = new String[laps];
 
-        for (int i = 0; i <= laps; i++) {
-            if(i == 0){
+        for (int round = 0; round <= laps; round++) {
+            if(round == 0){
                 System.out.println(">>>>>>>>>>>>>>>>>>>>>> WarmUp Lap <<<<<<<<<<<<<<<<<<<<<");
                 System.out.println();
                 System.out.println("ooooo");
@@ -103,10 +103,10 @@ public class TheRace {
                 System.out.println(">>>>>>>>>>> It's lights out and away we go! <<<<<<<<<<<");
             }
 
-            if(i>0){
-                System.out.println("######################## LAP "+i+" ########################");
+            if(round>0){
+                System.out.println("######################## LAP "+round+" ########################");
                 String rundenHighlights = new String();
-                if(i == laps) System.out.println(">>>>>>>>>>>>>>>>>>>>>> FINAL LAP <<<<<<<<<<<<<<<<<<<<<<");
+                if(round == laps) System.out.println(">>>>>>>>>>>>>>>>>>>>>> FINAL LAP <<<<<<<<<<<<<<<<<<<<<<");
                 System.out.println();
                 int gridPos = 1;
                 Driver inFront = null;
@@ -128,17 +128,17 @@ public class TheRace {
                                 gridList.toArray(grid);
                                 System.out.println(d.getLastname() + " setzt gerade zum Überholmanöver gegen " + inFront.getLastname() + " an!");
                                 if(rundenHighlights.length() == 0){
-                                    rundenHighlights = "Runde "+i+":\n";
+                                    rundenHighlights = "Runde "+round+":\n";
                                 }
                                 rundenHighlights += d.getLastname() + " hat " + inFront.getLastname() + " überholt und ist jetzt auf Platz "+ (gridPos-1) +"!\n";
                             }
                         }
                         //Box Box!
                         boolean pitThisLap = false;
-                        if(i>10 && d.getPitStops() == 0 && Math.random() > 0.7){
+                        if(round>10 && d.getPitStops() == 0 && Math.random() > 0.7){
                             d.addPitstop();
                             pitThisLap = true;
-                        }else if(i > (laps-10) && d.getPitStops() == 0){
+                        }else if(round > (laps-10) && d.getPitStops() == 0){
                             d.addPitstop();
                             pitThisLap = true;
                         }
@@ -153,14 +153,16 @@ public class TheRace {
                             grid = gridList.toArray(grid);
 
                             if(rundenHighlights.length() == 0){
-                                rundenHighlights = "Runde "+i+":\n";
+                                rundenHighlights = "Runde "+round+":\n";
                             }
                             rundenHighlights += d.getLastname() + " geht an die Box!\n";
                         }
+
+
                         gridPos++;
                     }else{
                         if(rundenHighlights.length() == 0){
-                            rundenHighlights = "Runde "+i+":\n";
+                            rundenHighlights = "Runde "+round+":\n";
                         }
                         rundenHighlights += d.getLastname() + " ist an Platz "+gridPos+" liegend ausgeschieden!\n";
                         System.out.println("----------------> DNF for: " +d.getFirstname()+" "+d.getLastname()+", oh no!");
@@ -178,7 +180,7 @@ public class TheRace {
                         inFront = driver;
                     }
 
-                    highlights[i-1] = rundenHighlights;
+                    highlights[round-1] = rundenHighlights;
                 }
 
 
