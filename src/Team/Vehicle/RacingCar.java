@@ -22,7 +22,7 @@ public class RacingCar extends Vehicle implements Engine {
 
     public void chanceOfDefect(){
         //
-        if(Math.random() > 0.99){
+        if(Math.random() > 0.995){
             this.isDefect = true;
             this.drives = false;
         }
